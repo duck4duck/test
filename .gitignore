@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+.env
+alembic.ini
+poetry.lock
+certs/
+.venv 
+__pycache__
