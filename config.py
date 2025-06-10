@@ -21,7 +21,7 @@ class Setting(BaseSettings):
     api_v1_prefix: str = "/api/v1"
 
     db_url:str
-    db_echo: bool = True
+    db_echo: bool = False
 
     private_key_path: Path
     public_key_path: Path

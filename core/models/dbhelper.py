@@ -1,17 +1,17 @@
 from sqlalchemy.ext.asyncio import create_async_engine,AsyncSession,async_sessionmaker,async_scoped_session
 from asyncio import current_task
 
-from .config import settings
+from ...config import settings
 
 class Database_helper:
-    def __init__(self,url:str,echo:False):
+    def __init__(self,url:str,echo:bool):
         self.engine = create_async_engine(url=url,echo=echo)
 
         self.session_factory = async_sessionmaker(
-            autoflush=False,
-            expire_on_commit=False,
+            autoflush=echo,
+            expire_on_commit=echo,
             bind=self.engine,
-            autocommit = False
+            autocommit = echo
 
 
     )

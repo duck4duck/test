@@ -2,7 +2,7 @@ import asyncio
 from contextlib import asynccontextmanager
 from aiobotocore.session import get_session 
 import os
-from core.models.config import settings
+from config import settings
 
 class S3_Client():
     def __init__(self,

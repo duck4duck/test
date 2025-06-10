@@ -10,7 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from core.models.dbhelper import db_helper
 from core.models.schemas import User
 from sqlalchemy import select
-from core.models import config
+from . import config
 from const import COOKIE_ACCESS,COOKIE_REFRESH,TOKEN_TYPE_FIELD,REFRESH_TOKEN_TYPE
 
 
