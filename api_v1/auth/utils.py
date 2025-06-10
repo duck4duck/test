@@ -1,7 +1,7 @@
 import jwt
 import bcrypt
 from datetime import timedelta,datetime
-from config import settings
+from core.config import settings
 from datetime import datetime, timedelta
 
 
