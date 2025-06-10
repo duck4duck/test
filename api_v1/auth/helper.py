@@ -1,6 +1,6 @@
 from api_v1.clients.pydantic_schemas import UserSchema
 from api_v1.auth import utils as jwt_utils
-from . import config
+from core import config
 from const import TOKEN_TYPE_FIELD,ACCESS_TOKEN_TYPE,REFRESH_TOKEN_TYPE
 
 
