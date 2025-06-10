@@ -4,6 +4,7 @@ from pathlib import Path
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+BASE_DIR = Path(__file__).resolve()
 
 class AuthJWT(BaseModel):
     private_key_path: Path
@@ -41,7 +42,7 @@ class Setting(BaseSettings):
     s3_bucket_name: str
     
     
-    model_config = SettingsConfigDict(env_file=".env",extra="ignore",env_file_encoding='utf-8')
+    model_config = SettingsConfigDict(env_file=BASE_DIR / ".env",extra="ignore",env_file_encoding='utf-8')
     @property
     def auth_jwt(self) -> AuthJWT:
         return AuthJWT(
